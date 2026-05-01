@@ -46,7 +46,7 @@
                     🛒 <span>Productos</span>
                 </a>
 
-                <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition">
+                <a href="{{ route('asistencias.index') }}" class="sidebar-link">
                     📅 <span>Asistencia</span>
                 </a>
 

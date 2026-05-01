@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsistenciaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DeportistaController;
@@ -39,3 +40,12 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::resource('productos', ProductoController::class);
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('asistencias', [AsistenciaController::class, 'index'])->name('asistencias.index');
+    Route::get('asistencias/create', [AsistenciaController::class, 'create'])->name('asistencias.create');
+    Route::post('asistencias', [AsistenciaController::class, 'store'])->name('asistencias.store');
+});
+
+Route::get('asistencias/{asistencia}', [AsistenciaController::class, 'show'])
+    ->name('asistencias.show');

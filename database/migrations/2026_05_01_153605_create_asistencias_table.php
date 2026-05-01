@@ -13,13 +13,9 @@ return new class extends Migration
     {
         Schema::create('asistencias', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('deportista_id')->constrained()->onDelete('cascade');
             $table->date('fecha');
-            $table->enum('estado', ['presente', 'ausente', 'justificado']);
-            $table->text('observacion')->nullable();
+            $table->foreignId('grupo_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-
-            $table->unique(['deportista_id', 'fecha']);
         });
     }
 

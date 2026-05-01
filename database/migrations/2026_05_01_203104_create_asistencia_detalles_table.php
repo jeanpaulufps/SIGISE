@@ -11,17 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('deportistas', function (Blueprint $table) {
+        Schema::create('asistencia_detalles', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('asistencia_id')->constrained()->onDelete('cascade');
+            $table->foreignId('deportista_id')->constrained()->onDelete('cascade');
+            $table->boolean('asistio')->default(true);
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('deportistas');
+        Schema::dropIfExists('asistencia_detalles');
     }
 };
