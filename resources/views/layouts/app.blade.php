@@ -24,7 +24,7 @@
             <!-- MENU -->
             <nav class="flex-1 p-4 space-y-2">
 
-                <a href="#"
+                <a href="{{ route('dashboard') }}"
                     class="sidebar-link flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition">
                     🏠 <span>Dashboard</span>
                 </a>

@@ -59,7 +59,6 @@
                                 <input type="checkbox"
                                     name="asistencias[{{ $d->id }}]"
                                     value="1"
-                                    checked
                                     class="w-5 h-5">
                             </div>
                         @endforeach

@@ -7,6 +7,7 @@ use App\Http\Controllers\DeportistaController;
 use App\Http\Controllers\GrupoController;
 use App\Http\Controllers\SedeController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -49,3 +50,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('asistencias/{asistencia}', [AsistenciaController::class, 'show'])
     ->name('asistencias.show');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware('auth')
+    ->name('dashboard');
