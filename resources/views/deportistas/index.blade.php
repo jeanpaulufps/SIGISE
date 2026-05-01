@@ -29,7 +29,7 @@
                 <th>Nombre</th>
                 <th>Documento</th>
                 <th>Grupo</th>
-                <th class="text-right">Acciones</th>
+                <th class="text-right!">Acciones</th>
             </tr>
         </thead>
 

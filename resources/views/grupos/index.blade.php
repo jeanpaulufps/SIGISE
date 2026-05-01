@@ -28,7 +28,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Sede</th>
-                <th class="text-right">Acciones</th>
+                <th class="text-right!">Acciones</th>
             </tr>
         </thead>
 

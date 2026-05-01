@@ -29,7 +29,7 @@
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Stock</th>
-                <th class="text-right">Acciones</th>
+                <th class="text-right!">Acciones</th>
             </tr>
         </thead>
 
