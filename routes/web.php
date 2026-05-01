@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DeportistaController;
+use App\Http\Controllers\GrupoController;
+use App\Http\Controllers\SedeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -21,4 +22,16 @@ Route::middleware(['auth', 'role:entrenador'])->group(function () {
 
 Route::middleware(['auth', 'role:secretaria'])->group(function () {
     Route::get('/dashboard/secretaria', fn() => 'Secretaria');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('deportistas', DeportistaController::class);
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('grupos', GrupoController::class);
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('sedes', SedeController::class);
 });

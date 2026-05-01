@@ -15,22 +15,51 @@
 @tailwind utilities;
 
 .input {
-    @apply w-full px-4 py-3 border rounded-xl outline-none bg-gray-50;
+    @apply w-full px-4 py-3 border border-gray-200 rounded-xl bg-gray-50 text-sm transition;
 }
 
 .input:focus {
-    @apply ring-2;
+    @apply ring-2 border-transparent;
     ring-color: #16a34a;
 }
 
 .btn-primary {
-    @apply w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition;
+    @apply bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition shadow;
+}
+
+.btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-700 px-5 py-2.5 rounded-xl text-sm;
+}
+
+.btn-danger {
+    @apply text-red-600 hover:text-red-800 text-sm;
 }
 
 .card {
-    @apply bg-white rounded-2xl shadow-xl p-8;
+    @apply bg-white rounded-2xl shadow-md p-6;
 }
 
 .sidebar-link {
     @apply flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition;
+}
+
+.label {
+    @apply block text-sm font-medium text-gray-600 mb-1;
+}
+
+.table {
+    @apply w-full text-sm;
+}
+
+.table th {
+    @apply text-left text-gray-500 font-medium py-3;
+}
+
+.table td {
+    @apply py-3 border-t;
+}
+
+/* HEADER */
+.page-header {
+    @apply flex justify-between items-center mb-6;
 }
