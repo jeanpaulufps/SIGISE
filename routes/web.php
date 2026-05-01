@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DeportistaController;
 use App\Http\Controllers\GrupoController;
 use App\Http\Controllers\SedeController;
-
+use App\Http\Controllers\ProductoController;
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -34,4 +34,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('sedes', SedeController::class);
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('productos', ProductoController::class);
 });

@@ -42,6 +42,10 @@
                     📍 <span>Sedes</span>
                 </a>
 
+                <a href="{{ route('productos.index') }}" class="sidebar-link">
+                    🛒 <span>Productos</span>
+                </a>
+
                 <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition">
                     📅 <span>Asistencia</span>
                 </a>

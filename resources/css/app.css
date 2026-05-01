@@ -23,6 +23,10 @@
     ring-color: #16a34a;
 }
 
+button {
+    @apply cursor-pointer;
+}
+
 .btn-primary {
     @apply bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition shadow;
 }
