@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('deportista_id')->constrained()->onDelete('cascade');
             $table->decimal('total', 10, 2);
-            $table->date('fecha');
             $table->timestamps();
         });
     }

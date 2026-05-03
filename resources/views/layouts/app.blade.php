@@ -46,13 +46,17 @@
                     🛒 <span>Productos</span>
                 </a>
 
+                <a href="{{ route('ventas.index') }}" class="sidebar-link">
+                    🛒 <span>Ventas</span>
+                </a>
+
                 <a href="{{ route('asistencias.index') }}" class="sidebar-link">
                     📅 <span>Asistencia</span>
                 </a>
 
-                <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition">
+                {{-- <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/10 transition">
                     💰 <span>Pagos</span>
-                </a>
+                </a> --}}
 
             </nav>
 

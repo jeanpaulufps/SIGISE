@@ -25,22 +25,14 @@ class AuthController extends Controller
 
             $request->session()->regenerate();
 
-            // Redirección según rol
-            $user = Auth::user();
+            // // Redirección según rol
+            // $user = Auth::user();
 
-            if ($user->role === 'super_admin') {
-                return redirect()->route('dashboard.admin');
-            }
+            // if ($user->role === 'super_admin') {
+            //     return redirect()->route('dashboard');
+            // }
 
-            if ($user->role === 'entrenador') {
-                return redirect()->route('dashboard.entrenador');
-            }
-
-            if ($user->role === 'secretaria') {
-                return redirect()->route('dashboard.secretaria');
-            }
-
-            return redirect('/dashboard');
+            return redirect('/deportistas');
         }
 
         return back()->withErrors([
